@@ -1,0 +1,6 @@
+D:\c#\project\ApexSQL\ApexSQL\bin\ApexSQL.dll.config
+D:\c#\project\ApexSQL\ApexSQL\bin\ApexSQL.dll
+D:\c#\project\ApexSQL\ApexSQL\bin\ApexSQL.pdb
+D:\c#\project\ApexSQL\ApexSQL\obj\Debug\ApexSQL.csprojResolveAssemblyReference.cache
+D:\c#\project\ApexSQL\ApexSQL\obj\Debug\ApexSQL.dll
+D:\c#\project\ApexSQL\ApexSQL\obj\Debug\ApexSQL.pdb
