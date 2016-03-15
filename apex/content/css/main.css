@@ -55,12 +55,16 @@ a {
 }
 .nav-hamburger {
     float: right;
-    padding: 4px;
+
+}
+.nav-hamburger a {
+    display: block;
+    padding: 6px;
 }
 .nav-hamburger span {
     display: block;
     width: 30px;
-    height: 4px;
+    height: 3px;
     background-color: #eee;
     margin-top: 5px;
 }
@@ -68,6 +72,8 @@ a {
     margin-top: 0;
 }
 .drop-list {
+    width: 100%;
+    background-color: #fff;
     z-index: 3;
     position: absolute;
     top: 61px;
@@ -78,8 +84,10 @@ a {
     padding: 0;
     margin: 0;
 }
-.drop-list li {
-    margin: 6px 0;
+.drop-list a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
 }
 .container {
     position: relative;
