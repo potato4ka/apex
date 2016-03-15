@@ -33,12 +33,15 @@ a {
 .container {
     position: relative;
     overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .aside {
     position: absolute;
     z-index: 1;
     background: #fff;
-    top: 137px;
+    top: 122px;
     width: 100%;
     left: 0;
     -webkit-transition: all 0.5s ease;
@@ -54,7 +57,7 @@ a {
     clear: both;
     height: 0;
 }
-.opened.aside {
+.opened .aside {
     margin-left: 0;
 }
 .breadcrumb {
@@ -102,7 +105,7 @@ a {
     text-decoration: none;
 }
 .content {
-    padding: 15px;
+    padding: 0 15px 15px;
 }
 .aside-opener-holder {
     display: none;
@@ -182,24 +185,53 @@ a {
     .nav-opener-holder {
         display: none;
     }
-
     .aside-opener-holder {
         display: block;
+        padding: 15px;
     }
-
+    .aside-opener {
+        display: block;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        padding: 6px;
+        width: 40px;
+    }
+    .aside-opener span {
+        display: block;
+        height: 3px;
+        margin-top: 5px;
+        background: #eee;
+        border-radius: 2px;
+    }
+    .aside-opener span:first-child {
+        margin-top: 0;
+    }
     .aside {
         position: relative;
-        width: 60px;
         float: left;
-        margin-left: 0;
         top: 0;
+        border-right: 1px solid #eee;
+        width: 70px;
+        left: 0;
+        margin-left: -70px;
     }
-
+    .opened .aside {
+        width: 300px;
+        margin-left: -300px;
+    }
+    .container {
+        padding-left: 70px;
+    }
+    .container.opened {
+        padding-left: 300px;
+    }
     .main-nav {
         display: none;
     }
-
-    .content {
-        margin-left: 60px;
+    .opened .main-nav {
+        display: block;
+    }
+    .breadcrumb {
+        padding: 22px 15px;
     }
 }
