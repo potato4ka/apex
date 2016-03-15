@@ -161,20 +161,21 @@ a:hover {
 .footer-social {
     width: 100%;
 }
-.contact-info ul {
-    width: 60%;
+.contact-info ul ,
+.footer-social ul {
+    text-align: center;
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 .contact-info li {
-    padding: 10px 0;
-}
-.info {
-    text-transform: uppercase;
+    padding: 4px;
+    display: block;
     font-size: 14px;
-    padding-left: 8px;
-    box-sizing: border-box;
 }
-.info a {
+.contact-info a {
     color: #666;
+}
+.footer-social li {
+    display: inline-block;
 }
