@@ -3,6 +3,6 @@
         $(".container").toggleClass("opened");
         e.preventDefault()
     });
-
+    $('.aside').height($('.main-wrapper').height() - $('.header').height());
 });
 
