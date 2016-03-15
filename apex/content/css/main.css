@@ -20,6 +20,9 @@ a {
 a:hover {
     text-decoration:underline;
 }
+* {
+    box-sizing: border-box;
+}
 .main-wrapper {
     display: table-row;
     height: 100%;
@@ -29,6 +32,76 @@ a:hover {
 .main-holder {
     display: table-cell;
     width: 100%;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+}
+.aside {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    border-top: 1px solid #eee;
+    top: 137px;
+    width: 100%;
+    left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-left: -100%;
+    padding: 15px;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}
+.opened.aside {
+    margin-left: 0;
+}
+.breadcrumb {
+    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
+    margin: 0 -15px;
+    padding: 15px;
+    font-size: 14px;
+}
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb li {
+    display: inline-block;
+    margin-left: 8px;
+}
+.breadcrumb li:before {
+    content: '\203a';
+    display: inline-block;
+    margin-right: 10px;
+}
+.breadcrumb li:first-child {
+    margin-left: 0;
+}
+.breadcrumb li:first-child:before {
+    display: none;
+}
+.nav-opener-holder {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.nav-opener {
+    display: block;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 10px;
+    background: #fafafa;
+    color: #666;
+}
+.nav-opener:hover {
+    text-decoration: none;
+}
+.content {
+    padding: 15px;
 }
 .footer {
     display: table-row;
