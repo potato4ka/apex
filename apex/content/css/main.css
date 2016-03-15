@@ -41,7 +41,6 @@ a:hover {
     position: absolute;
     z-index: 1;
     background: #fff;
-    border-top: 1px solid #eee;
     top: 137px;
     width: 100%;
     left: 0;
@@ -49,7 +48,6 @@ a:hover {
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
     margin-left: -100%;
-    padding: 15px;
     padding-bottom: 9999px;
     margin-bottom: -9999px;
 }
@@ -103,11 +101,48 @@ a:hover {
 .content {
     padding: 15px;
 }
+.aside-opener-holder {
+    display: none;
+}
+.main-nav {
+    border-bottom: 1px solid #eee;
+}
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+.main-nav a {
+    display: block;
+    padding: 15px;
+}
+.main-nav li {
+    border-top: 1px solid #eee;
+}
+.main-nav>ul>li>ul {
+    font-size: 14px;
+}
+.main-nav>ul>li>ul>li>ul {
+    font-size: 12px;
+}
+.main-nav>ul>li>a {
+    font-weight: bold;
+}
+.main-nav>ul>li>ul>li>ul>li>a {
+    padding-left: 30px;
+    background: #fafafa;
+    color: #666;
+    font-style: italic;
+}
+.main-nav>ul>li>ul>li>ul>li>a:before {
+    content: '\203a';
+    display: inline-block;
+    margin-right: 10px;
+}
 .footer {
     display: table-row;
     width: 100%;
-
-
 }
 .footer-wrapper {
     padding: 10px;
