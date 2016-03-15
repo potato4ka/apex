@@ -17,9 +17,6 @@ a {
     text-decoration:none;
     color:#3F72D8;
 }
-a:hover {
-    text-decoration:underline;
-}
 * {
     box-sizing: border-box;
 }
@@ -87,22 +84,29 @@ a:hover {
 .container {
     position: relative;
     overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .aside {
     position: absolute;
     z-index: 1;
     background: #fff;
-    top: 137px;
+    top: 122px;
     width: 100%;
     left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
     margin-left: -100%;
-    padding-bottom: 9999px;
-    margin-bottom: -9999px;
 }
-.opened.aside {
+.aside:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+.opened .aside {
     margin-left: 0;
 }
 .breadcrumb {
@@ -150,7 +154,7 @@ a:hover {
     text-decoration: none;
 }
 .content {
-    padding: 15px;
+    padding: 0 15px 15px;
 }
 .aside-opener-holder {
     display: none;
@@ -220,4 +224,89 @@ a:hover {
 .footer-social li {
     display: inline-block;
     padding: 10px 6px 0;
+}
+@media(min-width:768px) {
+    .nav-opener-holder {
+        display: none;
+    }
+    .aside-opener-holder {
+        display: block;
+        padding: 15px;
+    }
+    .aside-opener {
+        display: block;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        padding: 6px;
+        width: 40px;
+    }
+    .aside-opener span {
+        display: block;
+        height: 3px;
+        margin-top: 5px;
+        background: #eee;
+        border-radius: 2px;
+    }
+    .aside-opener span:first-child {
+        margin-top: 0;
+    }
+    .aside {
+        position: relative;
+        float: left;
+        top: 0;
+        border-right: 1px solid #eee;
+        width: 70px;
+        left: 0;
+        margin-left: -70px;
+    }
+    .opened .aside {
+        width: 300px;
+        margin-left: -300px;
+    }
+    .container {
+        padding-left: 70px;
+    }
+    .container.opened {
+        padding-left: 300px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .opened .main-nav {
+        display: block;
+    }
+    .breadcrumb {
+        padding: 22px 15px;
+    }
+    .contact-info {
+        float: left;
+    }
+    .contact-info li {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .contact-info li:before {
+        content: '';
+        width: 1px;
+        height: 12px;
+        display: inline-block;
+        margin: 3px 10px 0 0;
+        vertical-align: top;
+        background: #666;
+    }
+    .contact-info li:first-child {
+        padding-left: 0;
+    }
+    .contact-info li:first-child:before {
+        display: none;
+    }
+    .footer-social {
+        float: right;
+    }
+    .footer-wrapper {
+        padding: 15px;
+    }
+    .footer-social li {
+        padding-top: 0;
+    }
 }
