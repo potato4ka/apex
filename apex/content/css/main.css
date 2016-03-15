@@ -33,6 +33,57 @@ a:hover {
     display: table-cell;
     width: 100%;
 }
+.header:after ,
+.header-naw:after ,
+.footer-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.logo {
+    float: left;
+    max-width: 40%;
+}
+.logo img {
+    max-width: 100%;
+}
+.header-naw {
+    width: 59%;
+    overflow: hidden;
+}
+.nav-hamburger {
+    float: right;
+    padding: 4px;
+}
+.nav-hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #eee;
+    margin-top: 5px;
+}
+.nav-hamburger span:first-child {
+    margin-top: 0;
+}
+.drop-list {
+    z-index: 3;
+    position: absolute;
+    top: 61px;
+    left: 0;
+}
+.drop-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.drop-list li {
+    margin: 6px 0;
+}
 .container {
     position: relative;
     overflow: hidden;
@@ -150,11 +201,6 @@ a:hover {
     padding: 10px 10px 26px;
     background-color: #fafafa;
     border-top: 1px solid #eee;
-}
-.footer-wrapper:after {
-    content: '';
-    display: block;
-    clear: both;
 }
 .contact-info ul ,
 .footer-social ul {
