@@ -355,7 +355,7 @@ a {
     .drop-list .user-menu-opener {
         display: block;
         padding: 20px;
-        margin: -20px 0 -25px;
+        margin: -15px 0 -25px;
     }
     .user-menu {
         position: relative;
